@@ -1,4 +1,26 @@
 document.addEventListener("DOMContentLoaded", function() {
+    const videos = document.querySelectorAll("video");
+
+    videos.forEach(video => {
+        // Pausar otros videos al reproducir uno nuevo
+        video.addEventListener("play", function() {
+            videos.forEach(v => {
+                if (v !== video && !v.paused) {
+                    v.pause(); // Pausar otros videos que se estén reproduciendo
+                }
+            });
+        });
+
+        // Reproducir video seleccionado y controlar el estado de los controles
+        video.addEventListener("click", function() {
+            if (video.paused) {
+                video.play();
+            } else {
+                video.pause();
+            }
+        });
+    });
+
     const videoInfos = document.querySelectorAll(".video-info");
 
     videoInfos.forEach(info => {
