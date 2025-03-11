@@ -8,12 +8,12 @@
         body {
             margin: 0;
             padding: 0;
-            background-color: black; /*Opcional: Color de fondo como TikTok*/
+            background-color: black;
         }
 
         .video-container {
-            width: 100vw; /*Ocupa el ancho completo de la pantalla*/
-            height: 100vh; /*Ocupa el alto completo de la pantalla*/
+            width: 100vw;
+            height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -22,13 +22,13 @@
         video {
             width: 100%;
             height: 100%;
-            object-fit: contain; /*Mantiene la relación de aspecto*/
+            object-fit: contain;
         }
     </style>
 </head>
 <body>
     <div class="video-container">
-        <video controls>
+        <video controls poster="tu_imagen_poster.jpg">
             <source src="abc.mp4" type="video/mp4">
             Tu navegador no soporta el elemento de video.
         </video>
