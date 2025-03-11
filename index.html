@@ -3,26 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tutoriales Educativos</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Reproductor de Video TikTok</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: black; /*Opcional: Color de fondo como TikTok*/
+        }
+
+        .video-container {
+            width: 100vw; /*Ocupa el ancho completo de la pantalla*/
+            height: 100vh; /*Ocupa el alto completo de la pantalla*/
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        video {
+            width: 100%;
+            height: 100%;
+            object-fit: contain; /*Mantiene la relación de aspecto*/
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>Tutoriales Educativos</h1>
-    </header>
-    <div class="video-gallery">
-        <div class="video-item">
-            <video controls>
-                <source src="abc.mp4" type="video/mp4">
-                Tu navegador no soporta el elemento de video.
-            </video>
-            <div class="video-info">
-                <h2>Documento</h2>
-                <p>Descripción del Video Documento</p>
-            </div>
-        </div>
-        <!-- Añade más videos aquí -->
+    <div class="video-container">
+        <video controls>
+            <source src="abc.mp4" type="video/mp4">
+            Tu navegador no soporta el elemento de video.
+        </video>
     </div>
-    <script src="script.js"></script>
 </body>
 </html>
